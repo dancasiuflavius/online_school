@@ -37,13 +37,16 @@ namespace online_school.Models
             _id = atribute[3];
             _password = atribute[4];
         }
-        public void GetStudentDescription()
+        public String GetStudentDescription()
         {
-            Console.WriteLine("Nume: " + _surname);
-            Console.WriteLine("Prenume: " + _name);
-            Console.WriteLine("Varsta: " + _age);
-            Console.WriteLine("User ID:");
-            Console.WriteLine("Password:");
+            String text = "";
+            text += "Nume: " + _surname + "\n";
+            text += "Prenume: " + _name + "\n";
+            text += "Varsta: " + _age + "\n";
+            text += "ID: "  + _id + "\n";
+            text += "Password: " + _password + "\n";
+
+            return text;
         }
         public string GetSurname()
         {

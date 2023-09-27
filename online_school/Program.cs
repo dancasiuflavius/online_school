@@ -4,7 +4,7 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        ServiceCourse service = new ServiceCourse();
-        service.ReadCourses();
+        ServiceStudent service = new ServiceStudent();
+        service.ShowStudents();
     }
 }

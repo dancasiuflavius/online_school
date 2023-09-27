@@ -10,29 +10,49 @@ namespace online_school.Services
     public class ServiceStudent
     {
         private List<Student> _studentList;
+        private String _filePath;
 
         public ServiceStudent()
         {
-            Student student1 = new Student("Popescu", "Andrei", 18, "1A2B", "A2ferq");
-            Student student2 = new Student("Calinescu", "George", 21, "1B2A", "1As2");
-            Student student3 = new Student("Popa", "Dorin", 18, "2CD4", "123456");
-            Student student4 = new Student("Mihailescu", "Daniel", 19, "2C5E", "1A2b3C");
-            Student student5 = new Student("Flavius", "Dancasiu", 20, "D1F3", "qwer1324");
-
             _studentList = new List<Student>();
+            _filePath = GetDirectory();
 
-            _studentList.Add(student1);
-            _studentList.Add(student2);
-            _studentList.Add(student3);
-            _studentList.Add(student4);
-            _studentList.Add(student5);
+            this.ReadCourses();
         }
-        public void showStudents()
+        public string GetDirectory()
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string dataFolderPath = Path.Combine(currentDirectory, "Data");
+            string filePath = Path.Combine(dataFolderPath, "students.txt");
+            return filePath;
+        }
+        public void ReadCourses()
+        {
+            try
+            {
+
+                string filePath = GetDirectory();
+
+                // Create a StreamReader to read from the file
+                using (StreamReader reader = new StreamReader(filePath))
+                {
+                    // Read and process the file line by line
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        _studentList.Add(new Student(line));
+                    }
+                }
+            }
+            catch (IOException e)
+            {
+                Console.WriteLine("An error occurred while reading the file: " + e.Message);
+            }
+        }
+        public void ShowStudents()
         {
             for(int i=0; i < _studentList.Count; i++)
-            {
-                Student student = _studentList[i];
-            }
+                Console.WriteLine(_studentList[i].GetStudentDescription());
         }
 
     }

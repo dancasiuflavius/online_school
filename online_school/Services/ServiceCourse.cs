@@ -7,25 +7,31 @@ using System.Threading.Tasks;
 
 namespace online_school.Services
 {
-    internal class ServiceCourse
+    public class ServiceCourse
     {
         private List<Course> _courseList;
+        private String _filePath;
+
+        public ServiceCourse()
+        {
+            _courseList = new List<Course>();
+            _filePath = GetDirectory();
+
+            this.ReadCourses();
+        }
 
         public string GetDirectory()
         {
             string currentDirectory = Directory.GetCurrentDirectory();            
-                // Combine the path to the "Data" folder
             string dataFolderPath = Path.Combine(currentDirectory, "Data");
             string filePath = Path.Combine(dataFolderPath, "courses.txt");
             return filePath;
-
-            // Check if the "Data" folder exists
         }
         public void ReadCourses()
         {
             try
             {
-                // Specify the path to the file you want to read
+
                 string filePath = GetDirectory();
 
                 // Create a StreamReader to read from the file
@@ -35,7 +41,7 @@ namespace online_school.Services
                     string line;
                     while ((line = reader.ReadLine()) != null)
                     {
-                        Console.WriteLine(line); // You can process the line here
+                       _courseList.Add(new Course(line));
                     }
                 }
             }
@@ -43,6 +49,11 @@ namespace online_school.Services
             {
                 Console.WriteLine("An error occurred while reading the file: " + e.Message);
             }
+        }
+        public void ShowCourses()
+        {
+            for (int i = 0; i < _courseList.Count(); i++)
+                Console.WriteLine(_courseList[i].GetCourseDescription());
         }
 
     }
