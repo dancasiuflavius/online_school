@@ -1,0 +1,7 @@
+﻿1,Math,Algebra & Geometry,5,8
+2,Biology,Human Body,3,10
+3,Physics,Electricity & Nuclera energy,4,6
+4,Philosophy,Greece Mithology,2,5
+5,Programming,C#,5,10
+6,Web Design,CSS,3,8
+7,Data Bases,SQL,4,8

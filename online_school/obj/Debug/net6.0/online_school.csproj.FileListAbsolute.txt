@@ -1,0 +1,14 @@
+C:\mycode\incapsulare\online_school\online_school\bin\Debug\net6.0\online_school.exe
+C:\mycode\incapsulare\online_school\online_school\bin\Debug\net6.0\online_school.deps.json
+C:\mycode\incapsulare\online_school\online_school\bin\Debug\net6.0\online_school.runtimeconfig.json
+C:\mycode\incapsulare\online_school\online_school\bin\Debug\net6.0\online_school.dll
+C:\mycode\incapsulare\online_school\online_school\bin\Debug\net6.0\online_school.pdb
+C:\mycode\incapsulare\online_school\online_school\obj\Debug\net6.0\online_school.GeneratedMSBuildEditorConfig.editorconfig
+C:\mycode\incapsulare\online_school\online_school\obj\Debug\net6.0\online_school.AssemblyInfoInputs.cache
+C:\mycode\incapsulare\online_school\online_school\obj\Debug\net6.0\online_school.AssemblyInfo.cs
+C:\mycode\incapsulare\online_school\online_school\obj\Debug\net6.0\online_school.csproj.CoreCompileInputs.cache
+C:\mycode\incapsulare\online_school\online_school\obj\Debug\net6.0\online_school.dll
+C:\mycode\incapsulare\online_school\online_school\obj\Debug\net6.0\refint\online_school.dll
+C:\mycode\incapsulare\online_school\online_school\obj\Debug\net6.0\online_school.pdb
+C:\mycode\incapsulare\online_school\online_school\obj\Debug\net6.0\online_school.genruntimeconfig.cache
+C:\mycode\incapsulare\online_school\online_school\obj\Debug\net6.0\ref\online_school.dll

@@ -1,7 +1,10 @@
-﻿internal class Program
+﻿using online_school.Services;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        ServiceCourse service = new ServiceCourse();
+        service.ReadCourses();
     }
 }
